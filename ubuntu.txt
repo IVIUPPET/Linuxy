@@ -1,0 +1,50 @@
+Had to install:
+
+Dropbox (complicated)
+git
+vim
+anaconda/spyder (spyder v 2.3.8 from anaconda 2.5.0 
+is the awesome one on desktop)
+
+https://repo.continuum.io/archive/Anaconda3-2.5.0-Linux-x86_64.sh
+
+# chromium/chrome
+	# Chrome:
+	cd /tmp
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+	# If errors
+	sudo apt-get -f install
+
+#Teamviewer
+	# dl .deb from website
+	# install dpkg -i
+		#fix missing:
+		apt-get install -f
+
+# EasyTether
+	#http://www.upubuntu.com/2011/12/how-to-tether-your-android-phone-to.html
+	# Basically just dpkg -i the drivers:
+	#http://www.mobile-stream.com/easytether/drivers.html
+	# Run
+	easytether connect
+	# TODO: TEST THIS
+	# See this too:
+	https://wiki.archlinux.org/index.php/android_tethering
+	http://www.mobile-stream.com/easytether/android_faq.html#linuxsetup
+
+# RDP Client
+	# rdesktop
+	# Remmina (adamsj45 approves)
+
+	# Check out:
+http://www.techradar.com/news/5-of-the-best-linux-remote-desktop-clients
+https://www.egr.msu.edu/decs/help-support/how-to/connect-decs-remote-desktop-services-rds-servers
+
+# Steam
+	# Just go to website GUI install
+
+# Need to fix this shit window manager and taskbar and change background
+	- put close on right side, cpu usage, multiple desktops
+
+# biometrics, test VM/NX, Wine?, 

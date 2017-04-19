@@ -1,0 +1,6 @@
+virtualbox-dkms package
+
+apt-get install dkms
+
+
+try Qemu/vmware/kvm

@@ -1,0 +1,50 @@
+Process Management:
+
+Viewprocesses:
+top
+ - or -
+htop
+
+ps - show proc associated with current usr and terminal session
+ps aux  - all users
+ps axjf - tree view
+
+
+Get PID:
+pgrep procname
+
+Terminate(SIGTERM): (-9)
+kill PID
+
+Kill(SIGKILL): (-15)
+kill -KILL PID
+
+pkill signal procName
+
+Kill all instances of process:
+killall procName
+
+find a program:
+whereis program
+
+find program's link(?):
+which program
+
+start and stop:
+procName stop && procName start 
+
+
+
+Priority:
+nice -n <lvl> command  //lvl from "-19/-20" (high) to "19/20" (low)
+
+alter priority:
+renice <lvl> PID
+
+SERVICES:
+
+view:
+service --status-all
+
+start:
+service <service> start

@@ -1,0 +1,4 @@
+Disk Management:
+
+view free space:
+df -h

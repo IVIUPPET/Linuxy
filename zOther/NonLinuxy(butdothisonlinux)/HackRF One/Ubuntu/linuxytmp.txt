@@ -1,0 +1,199 @@
+ERROR INSTALLING:  Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+
+sudo lsof /var/lib/dpkg/lock (to view what PID has it)
+
+
+
+
+###Adding old shit:
+#add needed repository and update package list:
+echo "deb http://archive.ubuntu.com/ubuntu wily main universe" | sudo tee /etc/apt/sources.list.d/wily-copies.list
+sudo apt update
+
+#Install it:
+sudo apt install python-wxgtk2.8
+
+#Remove repository entry and update package list again
+sudo rm /etc/apt/sources.list.d/wily-copies.list
+sudo apt update
+
+
+
+install gnuradio
+$ wget http://www.sbrac.org/files/build-gnuradio && chmod a+x build-gnuradio && ./build-gnuradio
+
+
+but there is a typo in the script
+
+
+
+
+GNURADIO LOG:
+********************************************************************************
+This script has just modified /etc/group to place your userid '('$USER')' into group 'usrp'
+In order for this change to take effect, you will need to log-out and log back
+in again.  You will not be able to access your USRP1 device until you do this.
+
+If you wish to allow others on your system to use the USRP1 device, you will need to use:
+
+  sudo usermod -a -G usrp userid
+  
+For each userid you wish to allow access to the usrp
+
+********************************************************************************
+
+Further 
+Done function mod_groups at: Fri Oct 7 12:29:22 EDT 2016
+Starting function mod_udev at: Fri Oct 7 12:29:22 EDT 2016
+udevd: no process found
+Done function mod_udev at: Fri Oct 7 12:29:22 EDT 2016
+Starting function mod_sysctl at: Fri Oct 7 12:29:22 EDT 2016
+Applying updates to /etc/sysctl.conf
+Group 'usrp' now has real-time scheduling privileges
+You will need to log-out and back in again for this to
+take effect
+Done function mod_sysctl at: Fri Oct 7 12:29:23 EDT 2016
+Starting function pythonpath at: Fri Oct 7 12:29:23 EDT 2016
+
+
+************************************************************
+You should probably set your PYTHONPATH to:
+ 
+     /usr/local/lib/python2.7/dist-packages
+ 
+Using:
+ 
+export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
+ 
+in your .bashrc or equivalent file prior to attempting to run
+any Gnu Radio applications or Gnu Radio Companion.
+*************************************************************
+Done function pythonpath at: Fri Oct 7 12:29:23 EDT 2016
+Starting function extras at: Fri Oct 7 12:29:23 EDT 2016
+Done function extras at: Fri Oct 7 12:29:23 EDT 2016
+Done all functions at: Fri Oct 7 12:29:23 EDT 2016
+All Done
+
+=======================================================================
+If you have found this script useful and time-saving, consider a 
+donation to help me keep build-gnuradio, simple_ra, SIDsuite,
+meteor_detector, simple_fm_rcv, and multimode maintained and up to date.
+A simple paypal transfer to mleech@ripnet.com is all you need to do.
+======================================================================
+Send success/fail info to sbrac.org?
+
+
+
+#### endlog
+
+http://www.nutaq.com/blog/using-radio420x-sdr-gnu-radio-companion-within-virtual-machine
+
+https://mborgerson.com/getting-started-with-the-hackrf-one-on-ubuntu-14-04
+
+http://www.nutaq.com/blog/using-radio420x-sdr-gnu-radio-companion-within-virtual-machine
+
+
+
+#### mborgerson:
+do installgnuradio shit
+
+(installed some hackrf lib dev or some crap from somewhere (but wasnt saved in this log))
+
+##do GrOsmoSDR
+cd ~/sdr
+git clone git://git.osmocom.org/gr-osmosdr
+
+# move to it
+cd gr-osmosdr
+
+# make build dir, move, and use Cmake to create Makefiles
+mkdir build && cd build
+cmake ../
+
+# build and install
+make
+sudo make install
+sudo ldconfig
+
+
+## do Gqrx
+fuck this shit
+sudo apt install gqrx-sdr
+
+#clone repo
+cd ~/sdr
+git clone https://github.com/csete/gqrx.git
+
+cd gqrx
+
+# Create build dir, move, and use qmake NOT Cmake to create makefiles for bld
+# Note: message about no prefix given is ok
+mkdir build && cd build
+# Requires QT5 (install below if needed)
+qmake ../
+
+# build and install
+make
+
+# run gqrx
+./gqrx
+
+## BUT, need QT5
+NOO fuck all that shit doesn't work etc idk
+
+sudo apt-get install qtcreator
+and
+sudo apt-get install qt5-default (probably more useful/necessary)
+
+
+
+wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+
+#install
+chmod +x qd-opensource-linux-x64-5.7.0.run
+./qt-opensource-linux-x64-5.7.0.run
+
+# install g++
+sudo apt-get install build-essential
+
+# install generic font configuration library - runtime
+sudo apt-get install libfontconfig1
+
+Configure a compiler
+ ### stopped
+Launch Qt Creator. Go to Tools > Options. Click Build & Run and select tab Kit. Configure a compiler if it is not automatically detected.
+
+# Install OpenGL Libraries
+sudo apt-get install mesa-common-dev
+
+# need additional package for new ubuntu
+sudo apt-get install libglu1-mesa-dev -y
+
+# Set file association with pro files
+#create file named 'Qt-Creator.desktop' and put contents:
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=QtCreator
+Comment=QtCreator
+NoDsiplay=true
+Exec=(Install folder of QT)/Tools/QtCreator/bin/qtcreator %f
+Icon=(Install folder of QT)/5.4/Src/qtdoc/doc/images/landing/icon_QtCreator_78x78px.png
+Name[en_US]=Qt-Creator
+# Put in home .local/share/applications
+
+#edit a file named 'defaults.list' in the same dir to add following line:
+text/qtcreator=Qt-Creator.desktop;
+
+# Open file mimeapps.list and check if line present:
+application/vnd.nokia.qt.qmakeprofile=qtcreator.desktop
+
+# if not, add it under [added Associations]
+# Run command:
+sudo update-mime-database /usr/share/mime
+
+# now Qt has been added to list of file associations
+
+
+

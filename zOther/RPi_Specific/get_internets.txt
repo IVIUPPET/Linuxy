@@ -1,0 +1,24 @@
+## Get internets!
+# This was fail from when didn't know had to long click
+# the wifi icon in rpi3
+
+# First, made wpa.conf file and put it in /etc/wpa_supplicant/
+	# used:
+	# sudo su 
+	# wpa_passphrase Jedi > /etc/wpa_supplicant/wpa.conf
+
+# Scanned for networks with:
+iwlist scan
+
+# Associated with access point using
+sudo wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant/wpa.conf -B
+
+# release IP
+sudo dhclient wlan0 -r
+
+# Get new IP
+sudo dhclient wlan0
+
+
+
+http://askubuntu.com/questions/138472/how-do-i-connect-to-a-wpa-wifi-network-using-the-command-line

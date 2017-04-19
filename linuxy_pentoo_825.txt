@@ -1,0 +1,29 @@
+basics:
+
+resources:
+htop -p
+
+app update/install:
+eix ???
+
+usage: eix hackrf
+
+HackRF One:
+hackrf_info: display info
+hackrf_transfer: turn on data to rx or tx
+
+test usb port for max speed (40 MiB/s)
+hackrf_transfer -r /dev/null -s 20000000
+
+update FW:
+tar -xvf hackrf-****.**.*.tar.xz
+cd firmware-bin
+
+hackrf_spiflash (hackrf tools)
+hackrf_spiflash -w hackrf_one_usb_rom_to_ram.bin (bin loads itself into ram from rom)
+- reboot it (reset sw) -
+
+update cpld (complex programmable logic device - .xsvf file) between uC and ADC and DAC
+hackrf_cpldjtag -x hackrf_cpld_default.xsvf
+
+

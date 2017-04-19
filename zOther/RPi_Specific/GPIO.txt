@@ -1,0 +1,22 @@
+# GPIO commands for wiringpi's GPIO console 
+
+gpio -g mode 18 pwm
+gpio pwm-ms
+gpio pwmc 192
+gpio pwmr 2000
+gpio -g pwm 18 [logicHiIn e-5 seconds] (i.e. 100 == 1 ms)
+
+shutdown 
+gpio -g mode 18 input
+
+
+quick copypaste:
+
+gpio -g mode 18 pwm
+gpio pwm-ms
+gpio pwmc 192
+gpio pwmr 2000
+gpio -g pwm 18 100
+
+
+gpio -g mode 18 input

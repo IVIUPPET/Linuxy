@@ -1,0 +1,26 @@
+# Permissions:
+# Run with sudo
+
+# change
+chmod value /path/to/file
+
+# change ownership
+chown [flags] usr foldername
+	-R # Recursive (folder and contents)
+
+
+# Further reading:
+http://stackoverflow.com/questions/11271596/how-will-a-server-become-vulnerable-with-chmod-777
+
+Each digit in the chmod command represents an octal (3-bit) number. With three digits, that's 9 bits total. Each bit represents a permission; 1 == has permission, 0 == does not have permission.
+
+The three bits in each digit represent read (binary 100 == decimal 4), write (binary 010 == decimal 2), and execute (binary 001 == decimal 1). Decimal 7 is read+write+execute permission.
+
+The first digit of a chmod command represents the permissions of the owner of a file or directory. The second is for the group. The third is for the "universe" -- that is, everyone else.
+
+So, chmod 777 represents read, write, and execute permission for you, the group, and everyone. This is usually much greater access than is required.
+
+For your real-world example, imagine if a file called my_bank_account_credentials were altered with chmod 777. Not very safe! A malicious user could change what's in there or just read it and happily take your money.
+
+For servers, the chief danger is that an exploited bug in the server code could allow an attacker to access anything that the server process has rights to -- which would include anything that has the 777 permission set.
+

@@ -1,0 +1,5 @@
+# Kernel/low level stuff
+
+# Refresh udev rules
+udevadm control --reload-rules && udevadm trigger
+

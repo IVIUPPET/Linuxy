@@ -1,0 +1,4 @@
+UI Tweaks
+
+Add to context menu:
+sudo apt-get install nautilus-actions

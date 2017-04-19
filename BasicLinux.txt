@@ -1,0 +1,19 @@
+# Basic linux commands
+# i.e. coreutils
+
+# change directory
+cd /home/user/path/to/file
+
+# mount
+mount /something
+# TODO: update, search for 'purposes of linux folders' and integrate relevant info
+
+# list directory contents
+ls
+	# useful flags
+	-a # show hidden dirs (start with . )
+	-l # list: #TODO: show syntax ..point on making this file
+	-h # human readable
+	-S # sort by size
+	-r # reverse
+	

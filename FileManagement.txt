@@ -1,0 +1,44 @@
+File Mgmt
+
+Batchrename:
+
+www.greplinux.net/2012/08/how-to-batch-rename-files-in-linux.html
+
+
+Secure Copy:
+scp [options] username@sourcehost:/dir1/file1 usrname2@desthost:/dir2/filename2
+# or
+rsync -P -e ssh source destination 
+
+SFTP:
+sftp usr@host
+put "l" in front of cmd for local version
+Download:
+get fileName optionalAltName, get -r someDir, use -p to copy permissions
+Upload:
+put localFile
+
+go to local shell: (or tack onto commands)
+!
+
+change owner:
+chown UID file
+
+get groups:
+get /etc/group
+!less group
+
+
+Zipping/Unzipping:
+tar
+
+.tar -> -xf
+.tar.gz -xzf //z = gzip
+
+
+
+Symlink: (or shift+ctrl and drag)
+ln -s /folderorfile/link/will/point/to /name/of/link
+
+# TODO: compare with /some/path/file -> /a/different/path
+# available in context menu

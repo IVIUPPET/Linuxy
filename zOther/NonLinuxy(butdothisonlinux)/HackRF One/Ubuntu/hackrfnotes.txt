@@ -1,0 +1,36 @@
+Notes of shit from hackrf vids because rewatching is stupid
+
+## LESSON 1 ##
+
+Sources::OsmocomSource
+	Turn down 'Ch0: RF Gain (dB)' = 0 // not needed
+	IQ Balance mode: off // just bc this way in vid
+
+Instrumentation::WX::WX GUI FFT Sink
+	Averaging = off is nicer to see
+
+
+
+basic radio tut:
+
+multiply shift shit away from dc spike etc
+
+but channel width is important to use less cpu for much lower bandwith signal
+coming out of low pass filter
+	- width of FM station is 200k
+	- set decimation to this sample rate in low pass since
+		we don't need all this BW. Note needs type int
+Add rational resampler to adjust the sample rate by nonint value
+
+WBFM
+Quadrature Rate - sample rate of input
+Audio Decimation - Amount to decimate to get to audio sample rate
+
+NOTE: THIS PROGRAM IS SHIT, 5e6/25*(12/5) != 400k, is 480k
+EDIT: Since used ints it rounds. ALWAYS PUT DECIMAL WITH GRC
+
+## End lesson 1 ##
+
+### Other notes:
+cal:
+https://medium.com/@rxseger/sdr-calibration-via-gsm-fcch-using-kalibrate-and-lte-cell-scanner-on-rtl-sdr-and-hackrf-193a7fb8a3eb#.iisqudgzn

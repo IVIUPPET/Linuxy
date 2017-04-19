@@ -1,0 +1,13 @@
+find /root/Desktop/cse825/Key Fob/2010 Focus/2Msequential/ -maxdepth 1 -type f -exec 
+
+find /root/Desktop/cse825/Key Fob/2010 Focus/2Msequential/ -maxdepth 1 -type f -exec xxd {}\.; > results.out
+
+missing argument to '-exec'
+
+?
+
+
+
+stackoverflow.com/questions/10523415/bash-script-to-execute-command-on-all-files-in-directory
+linuxconfig.org/bash-scripting-tutorial
+

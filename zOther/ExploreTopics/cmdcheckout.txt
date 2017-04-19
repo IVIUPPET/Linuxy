@@ -1,0 +1,10 @@
+# useful shit to check out
+
+lynx - text browser no virus
+
+
+du
+dmesg tail
+lsblk
+
+check out ls sorting options, human readable etc

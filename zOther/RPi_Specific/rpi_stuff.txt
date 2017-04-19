@@ -1,0 +1,20 @@
+update firmware:
+sudo rpi-update # not needed anymoar
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=138137f
+
+sudo apt-get -y upgrade #??
+
+
+
+disable wireless power management:
+sudo iwconfig wlan0 power off
+
+or
+
+iw dev wlan0 set power_save off
+..use 1st one?

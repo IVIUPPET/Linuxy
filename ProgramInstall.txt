@@ -1,0 +1,7 @@
+wget UrlofFile.deb
+sudo dpkg -i file.deb
+
+ADDING REPOSITORY:
+sudo add-apt-repository shit
+ex: sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update

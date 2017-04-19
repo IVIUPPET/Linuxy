@@ -1,0 +1,42 @@
+User Mgmt:
+
+
+ADD USER:
+confirm version of Linux and Kernel:
+uname -a
+lsb_release -a
+
+add user: (-m create homedir)
+useradd -m user1
+
+add pw:
+passwd user1
+
+add user to sudo group: (-a append/add -G group/groups)
+usermod -a -G sudo user1
+
+change default shell of user to bash:
+chsh -s /bin/bash user1
+
+RM USER: (-r delete al files and homedir for user)
+userdel -r user1
+
+check:
+ls /home
+
+su user1
+
+
+# GROUPS
+View:
+/etc/group
+# -or-
+groups <usr>
+
+Create group:
+groupadd <groupname>
+
+Add user to group:
+usermod -a -G <grp> <usr> # -a append, -G group
+
+

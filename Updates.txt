@@ -1,0 +1,17 @@
+# Updates
+
+# https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line
+
+#https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean
+
+sudo apt-get update        # Fetches the list of available updates
+sudo apt-get upgrade       # Strictly upgrades the current packages
+sudo apt-get dist-upgrade  # Installs updates (new ones)
+
+# also might need to run:
+sudo apt-get autoremove 
+# and
+sudo apt-get autoclean
+# to remove extra shit
+
+sudo reboot

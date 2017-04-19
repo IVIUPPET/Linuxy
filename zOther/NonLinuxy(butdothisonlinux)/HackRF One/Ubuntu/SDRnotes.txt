@@ -1,0 +1,3 @@
+FMRAdio QT test actually works
+fmradio_test is set to uhf
+hackrf_info is how to see if detected
