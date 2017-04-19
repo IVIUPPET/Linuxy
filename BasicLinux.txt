@@ -16,4 +16,6 @@ ls
 	-h # human readable
 	-S # sort by size
 	-r # reverse
-	
+
+	# also use
+	ls -l `which someCommandInPath` # to print shortcut/link info	
