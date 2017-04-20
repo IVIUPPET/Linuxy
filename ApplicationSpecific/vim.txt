@@ -24,3 +24,6 @@ https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 
 # Notes syntax!
 http://www.vim.org/scripts/script.php?script_id=3375
+
+# Some good vim examples
+reddit.com/r/Python/comments/34h6el/vim_as_an_alternative_to_spyder
