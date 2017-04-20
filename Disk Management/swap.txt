@@ -1,0 +1,17 @@
+# Swap
+https://help.ubuntu.com/community/SwapFaq
+
+### For a separate swap partition
+1. create with gparted
+ - Linux-swap
+
+2. Get UUID of /dev/yourswappartition
+ - blkid or gparted information
+d5f78aaa-fcdc-4be5-876b-6463a4bebed0
+ - Can use path or UUID, but UUID stays consistent between boots
+
+3. Tell Linux where to find the swap partition, modify /etc/fstab
+ - Look for line with 'swap' in it
+
+4. Activate
+	sudo swapon --all OR
