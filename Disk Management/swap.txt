@@ -14,4 +14,30 @@ d5f78aaa-fcdc-4be5-876b-6463a4bebed0
  - Look for line with 'swap' in it
 
 4. Activate
-	sudo swapon --all OR
+sudo swapon --all --verbose # didn't actually print anything
+
+5. Confirm existence
+cat /proc/swaps # printed two things until reboot
+
+6. Reboot.
+
+(Optional) Make work for hibernate
+
+1. Open /etc/default/grub, modify such that
+GRUB_CMDLINE_LINUX="resume=UUID=234hUUIDofyourNewSwap"
+
+2. Refresh
+sudo update-grub
+
+3. Modify /etc/initramfs-tools/conf.d/resume s.t. contents are:
+resume=UUID=UUIDofYourNewSwap
+
+4. Refresh
+sudo update-initramfs -u # -u for already existing
+
+Done.
+To hibernate:
+sudo systemctl hibernate
+
+Since this doesn't work on all systems ( usually controllable causes),
+is disabled. To enable in context menu, see hibernate.txt 
