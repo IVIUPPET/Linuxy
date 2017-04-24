@@ -1,5 +1,7 @@
 Had to install:
 
+Logical Volume Management
+
 Dropbox (complicated)
 git
 vim
@@ -44,7 +46,14 @@ https://www.egr.msu.edu/decs/help-support/how-to/connect-decs-remote-desktop-ser
 # Steam
 	# Just go to website GUI install
 
+# CPU usage
+	sudo apt install indicator-multiload
+	search and run 'system load indicator'
+
 # Need to fix this shit window manager and taskbar and change background
 	- put close on right side, cpu usage, multiple desktops
+
+Bind cs as cd and ls
+	see basiclinux
 
 # biometrics, test VM/NX, Wine?, 

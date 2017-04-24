@@ -4,11 +4,19 @@ Batchrename:
 
 www.greplinux.net/2012/08/how-to-batch-rename-files-in-linux.html
 
+Copy:
+cp [flags] source dest
+
+Copy with permissions:
+cp -ax # == cp -pdRx
+- or -
+rsync -ah --progress # use -z to zip for over network
 
 Secure Copy:
 scp [options] username@sourcehost:/dir1/file1 usrname2@desthost:/dir2/filename2
 # or
-rsync -P -e ssh source destination 
+rsync -P -e ssh source destination
+	# -P = --partial --progress, to resume failed copy 
 
 SFTP:
 sftp usr@host

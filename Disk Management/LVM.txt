@@ -2,3 +2,7 @@ https://www.howtoforge.com/linux_lvm
 https://www.reddit.com/r/linuxquestions/comments/1id4ha/is_an_lvm_a_good_choice/
 https://www.howtogeek.com/211937/how-to-use-lvm-on-ubuntu-for-easy-partition-resizing-and-snapshots/
 https://wiki.ubuntu.com/Lvm
+
+install Logical Volume Management
+sudo apt-get install system-config-lvm
+

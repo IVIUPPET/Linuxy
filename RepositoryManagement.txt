@@ -16,3 +16,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 any errors:
 sudo apt-get -f install
+
+
+Can also add Github repo to apt
+sudo apt-add-repository ppa:gitUsrName/repoName # -y to say yes to all
+sudo apt-get update
+sudo apt-get install repoName

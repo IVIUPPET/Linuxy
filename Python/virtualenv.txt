@@ -18,7 +18,7 @@ virtualenv env # convention to call virtualenv directory containing the environm
 # http://stackoverflow.com/questions/34398676/does-conda-replace-the-need-for-virtualenv
 # https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
 # http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/
-# https://conda.io/docs/using/envs.html
+###### https://conda.io/docs/using/envs.html # (good stuff)
 
 # Create:
 	# To see available pythons:
@@ -34,3 +34,80 @@ source deactivate
 
 # Remove:
 conda env remove --name <envname>
+
+See available envs and paths
+conda info --envs
+
+clone:
+conda create --name cloneDupName --clone cloneOrigTarget
+check:
+conda info --envs
+
+Exporting environment:
+	Activate
+	source activate environmentName
+	
+	Export
+	conda env export > environment.yml # handles pip and conda packages
+
+	Create based on file on other machine:
+	conda env create -f environment.yml
+#### TMPinstructions: Unfucking anaconda and spyder
+
+1. Need to backup the working crazyflie conda environment
+2. Backup version of conda/anaconda
+
+3. remove anaconda
+
+4. reinstall anaconda
+
+5. replace virtualenvs
+
+don't fucking update anything ever. Use virtualenvs.
+This seems like slightly bad practice.
+
+1. Backup working conda venvs
+ - View envs: conda info --envs
+ - Stored in ~/anaconda3/envs/envName
+ - Anaconda must have been updated, as 2.5.0 was installed
+ - Maybe this is part of the clusterfuck
+crazyflieClone           /home/mike/anaconda3/envs/crazyflieClone
+spyderDev                /home/mike/anaconda3/envs/spyderDev
+crazyflie                /home/mike/.conda/envs/crazyflie
+
+also backup the config files just for good measure
+activate the env, then: conda env export > environment.yml
+crazyflieClone has problem with pyqt. should be interesting to compare ymls
+
+
+2. Backup version of conda/anaconda
+Anaconda installed was 2.5.0
+
+mike@mike-W540:~$ conda info
+Current conda install:
+
+               platform : linux-64
+          conda version : 4.3.16
+       conda is private : False
+      conda-env version : 4.3.16
+    conda-build version : 1.19.0
+         python version : 3.5.3.final.0
+       requests version : 2.13.0
+       root environment : /home/mike/anaconda3  (writable)
+    default environment : /home/mike/anaconda3
+       envs directories : /home/mike/anaconda3/envs
+                          /home/mike/.conda/envs
+          package cache : /home/mike/anaconda3/pkgs
+                          /home/mike/.conda/pkgs
+           channel URLs : https://repo.continuum.io/pkgs/free/linux-64
+                          https://repo.continuum.io/pkgs/free/noarch
+                          https://repo.continuum.io/pkgs/r/linux-64
+                          https://repo.continuum.io/pkgs/r/noarch
+                          https://repo.continuum.io/pkgs/pro/linux-64
+                          https://repo.continuum.io/pkgs/pro/noarch
+            config file : None
+           offline mode : False
+             user-agent : conda/4.3.16 requests/2.13.0 CPython/3.5.3 Linux/4.4.0-72-generic debian/stretch/sid glibc/2.23
+                UID:GID : 1000:1000
+
+

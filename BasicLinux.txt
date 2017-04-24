@@ -16,4 +16,18 @@ ls
 	-h # human readable
 	-S # sort by size
 	-r # reverse
-	
+
+	# also use
+	ls -l `which someCommandInPath` # to print shortcut/link info	
+
+
+Perhaps this should go elsewhere, but one can make functions to simplify this
+https://askubuntu.com/questions/16106/how-can-i-create-an-alias-for-cd-and-ls
+
+write into ~/.bashrc, a file that stores bash's configurations (has cool stuff in it)
+function cs () {
+    cd "$@" && ls
+    }
+
+then refresh
+source ~/.bashrc
