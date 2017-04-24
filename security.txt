@@ -1,0 +1,7 @@
+Security:
+
+https://wiki.ubuntu.com/BasicSecurity
+https://askubuntu.com/questions/732726/how-to-install-rkhunter-in-ubuntu
+https://help.ubuntu.com/community/RKhunter
+
+
