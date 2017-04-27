@@ -111,3 +111,7 @@ Current conda install:
                 UID:GID : 1000:1000
 
 
+This shit didn't work, incompatibility wiht qt
+instead just install miniconda, venv dependencies, then make venv for everything. Or at least shit that is finnicky like C wrapped libs like pyqt
+
+
