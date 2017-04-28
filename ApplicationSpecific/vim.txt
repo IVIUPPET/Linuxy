@@ -23,6 +23,9 @@ http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
 and this:
 https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 
+# Some good vim examples
+reddit.com/r/Python/comments/34h6el/vim_as_an_alternative_to_spyder
+
 # Notes syntax!
 http://www.vim.org/scripts/script.php?script_id=3375
 	# Simple notes:
@@ -30,5 +33,17 @@ http://www.vim.org/scripts/script.php?script_id=3375
 	# Complex notes:
 	https://github.com/xolox/vim-notes
 
-# Some good vim examples
-reddit.com/r/Python/comments/34h6el/vim_as_an_alternative_to_spyder
+	# Notes is easier to deal with using a Vim plug-in manager
+	use Pathogen or Vundle
+		Pathogen not technicallu plugin manager, Vundle is
+	Reddit says use vim-plug
+	https://github.com/junegunn/vim-plug
+	vim-plug setup
+		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+		Add vim-plug section to ~/.vimrc
+	Add to ~/.vimrc in the vim-plug section:
+	Plug 'xolox/vim-notes'
+	Plug 'xolox/vim-misc'
+
+	:PlugInstall
