@@ -1,7 +1,13 @@
-Security:
+security.txt
 
 https://wiki.ubuntu.com/BasicSecurity
+https://www.cyberciti.biz/faq/linux•install-glances-monitoring-tool/
+https://ubuntuforums.org/showthread.php?t=1871177
 https://askubuntu.com/questions/732726/how-to-install-rkhunter-in-ubuntu
 https://help.ubuntu.com/community/RKhunter
 
 
+https://help.ubuntu.com/12.04/serverguide/firewall.html
+
+Test:
+https://www.cyberciti.biz/networking/nmap•command-examples-tutorials/
