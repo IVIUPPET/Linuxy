@@ -1,4 +1,4 @@
-uncommented 'syntax on' and 'filetype indent plugin on
+uncommented 'syntax on' and 'filetype indent plugin on'
 in /usr/share/vim/vimrc
 
 go explore, there is other cool shit in there
@@ -15,6 +15,7 @@ set tabstop=8
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+
 
 check this shit out:
 http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
