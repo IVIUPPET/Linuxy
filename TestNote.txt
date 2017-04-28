@@ -1,0 +1,55 @@
+TestNote.txt
+shit it’s only the first line
+
+Test list:
+• shit 1
+• shit 2
+   • lessshit 3
+   • *importantshit**
+
+_italian_ 
+lol didn’t work
+
+this is a `backtick`, an ‘apostrophe’, “reg quotes”, ~/a \directory/
+
+— some shit
+→ an arrow 
+:was isst das
+# vs this
+
+“ What about quot”
+‘ what about pythonic’
+DONE noshit
+TODO shit. a bug
+XXX This gon break yo shit. Segfault your state machines
+1) this is cool
+2) what
+   • oo cool bullets and numbers
+
+
+> email shit
+> moar email shit
+> even more (it auto puts the ‘>’)
+
+## What about text fold
+
+# :Ah starting with a colon too
+All seems to work the same
+# Some python:
+Python: {{{python def fuckMicrosoft(vim): pass }}}
+Shell: {{{sh sudo rm -rf /* }}}
+> Run the above codes to remove virus if linux is slow
+
+DONE this is cool. Lets look at the output
+
+To get started enter a title for your note above. When you’re ready to save
+your note just use Vim’s :write or :update commands, a filename will be picked
+automatically based on the title.
+
+                                    * * *
+
+The notes plug-in comes with self hosting documentation. To jump to these notes
+position your cursor on the highlighted name and press ‘gf’ in normal mode:
+
+ • Note taking syntax
+ • Note taking commands
