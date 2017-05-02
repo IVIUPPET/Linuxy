@@ -3,7 +3,11 @@
 
 
 
-
+### Custom alias function for ls and cd
+function cs () {
+    cd "$@" && ls
+    }
+		
 # added for simplicity with using virtualenvs
 alias sa='source activate'
 alias sd='source deactivate'
