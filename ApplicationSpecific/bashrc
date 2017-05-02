@@ -1,0 +1,13 @@
+# Append to ~/.bashrc:
+
+
+
+
+
+# added for simplicity with using virtualenvs
+alias sa='source activate'
+alias sd='source deactivate'
+
+# Added for shits and giggs
+alias s='source'
+

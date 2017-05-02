@@ -24,6 +24,16 @@ ctrl + v (visual mode)
 Remove:
 (select with visual mode)
 x
+
+
+Added python.vim to reflect these changes
+still need to add .vimrc once xolox/vimnotes is finalized
+
+
+
+
+
+
 check this shit out:
 http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
 
