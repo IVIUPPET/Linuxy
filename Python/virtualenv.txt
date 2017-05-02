@@ -52,6 +52,12 @@ Exporting environment:
 
 	Create based on file on other machine:
 	conda env create -f environment.yml
+
+Install from file:
+cd into cloned repo
+(activeVenv): conda install reponame
+# Might need to do: conda config --add channels conda-forge
+
 #### TMPinstructions: Unfucking anaconda and spyder
 
 1. Need to backup the working crazyflie conda environment

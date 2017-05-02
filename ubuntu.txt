@@ -42,7 +42,8 @@ https://repo.continuum.io/archive/Anaconda3-2.5.0-Linux-x86_64.sh
 	# Check out:
 http://www.techradar.com/news/5-of-the-best-linux-remote-desktop-clients
 https://www.egr.msu.edu/decs/help-support/how-to/connect-decs-remote-desktop-services-rds-servers
-
+	Decs says use FreeRDP
+		Like page says, apt version (1.1.0-beta1) doesn't seem to work
 # Steam
 	# Just go to website GUI install
 

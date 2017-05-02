@@ -16,7 +16,14 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
+Block comment insert a #:
+ctrl + v (visual mode)
+(select the characters)
+:s/^/#
 
+Remove:
+(select with visual mode)
+x
 check this shit out:
 http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
 
@@ -47,3 +54,4 @@ http://www.vim.org/scripts/script.php?script_id=3375
 	Plug 'xolox/vim-misc'
 
 	:PlugInstall
+
