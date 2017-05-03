@@ -1,7 +1,8 @@
 Latex stuff
 
 apt install texlive
-
+Alt:
+apt install texlive-full (huge but avoids some headaches as no package manager for dependencies)
 
 Basic: Generate PDF from tex:
 pdflatex docName.tex
@@ -12,7 +13,7 @@ apt install rubber (v1.4 at this time)
 use mupdf
 apt install mupdf
 
-add this shit to .vimrc
+add this shit to .vimrc or ftplugin/tex.vim
 " LaTeX (rubber) macro for compiling
 nnoremap <leader>c :w<CR>:!rubber --pdf --warn all %<CR>
 
