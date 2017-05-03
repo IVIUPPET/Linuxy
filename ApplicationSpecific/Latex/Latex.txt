@@ -1,0 +1,46 @@
+Latex stuff
+
+apt install texlive
+
+
+Basic: Generate PDF from tex:
+pdflatex docName.tex
+
+Going from reddit:
+apt install rubber (v1.4 at this time)
+
+use mupdf
+apt install mupdf
+
+add this shit to .vimrc
+" LaTeX (rubber) macro for compiling
+nnoremap <leader>c :w<CR>:!rubber --pdf --warn all %<CR>
+
+" View PDF macro; '%:r' is current file's root (base) name.
+nnoremap <leader>v :!mupdf %:r.pdf &<CR><CR>
+
+Now just use \c and \v to compile and refresh!
+
+
+Seems also need:
+gh/hplgit/ptex2tex.git
+
+LaTeX style files are located in:
+    /home/username/miniconda3/envs/docOnce/share/texmf/tex/latex/ptex2tex
+    Please make sure the latex command can
+    locate them, see the README file.
+
+Note this shit:
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+when trying to run pdftex, might need -shell-escape
+
+
+Just learn how to use beamer and doconce
+
+http://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux
+https://www.reddit.com/r/vim/comments/1hy5o5/best_latex_plugin/
+
+Everything:
+https://en.wikibooks.org/wiki/LaTeX
