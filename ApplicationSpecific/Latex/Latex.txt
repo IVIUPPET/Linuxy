@@ -45,3 +45,17 @@ https://www.reddit.com/r/vim/comments/1hy5o5/best_latex_plugin/
 
 Everything:
 https://en.wikibooks.org/wiki/LaTeX
+
+
+
+
+Some themes and shit:
+https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html
+https://tex.stackexchange.com/questions/54577/how-do-i-customize-beamer-template
+http://users.math.msu.edu/users/weil/FramesBeamerUS10.pdf
+
+
+
+
+
+OA
