@@ -19,3 +19,19 @@ inoremap <C-c> <Nop>
 nmap <C-c> :s/^/%<enter>
 imap <C-c> <esc>:s/^/%<enter>
 
+" [block comment mapping]
+" map insertmode ctrl+c to substitute '#' at beginning of selected
+" lines: (well, % for tex)
+" :s/^/# 
+" then hit enter
+vmap <C-b> :s/^/\\<enter>
+
+" also need so can just hit ctrl c while on a line in insert mode
+" remove previous mapping in normal and insert, then remap
+nnoremap <C-b> <Nop>
+inoremap <C-b> <Nop>
+nmap <C-b> :s/^/\\<enter>
+imap <C-b> <esc>:s/^/\\<enter>
+
+" test
+"
