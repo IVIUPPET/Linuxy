@@ -1,0 +1,23 @@
+Generating keys for public/private key auth
+- Using a client (your PC) and server (rpi), trying to access server securely
+
+On Server:
+mkdir ~/.ssh
+vim authorized_keys
+	- paste client's public key (see below)
+sudo /etc/init.d/ssh restart
+-or-
+sudo reboot
+
+On client:
+generate new ssh key:
+	ssh-keygen -t rsa -C 'someKnownIdentifier' (hostname seems good)
+Keep the not .pub one
+Copy public key to server
+Append to 'authorized_keys' on server using:
+	cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<IP-ADDRESS> 'cat >> .ssh/authorized_keys'
+
+Secure the server by disabling password auth:
+vim /etc/ssh/sshd_config
+PasswordAuthentication no
+<restart ssh>
