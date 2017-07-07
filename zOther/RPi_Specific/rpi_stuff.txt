@@ -18,3 +18,7 @@ or
 
 iw dev wlan0 set power_save off
 ..use 1st one?
+
+
+change password:
+passwd 
