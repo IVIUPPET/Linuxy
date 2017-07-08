@@ -1,3 +1,8 @@
+https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+
+http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi
+
+
 Generating keys for public/private key auth
 - Using a client (your PC) and server (rpi), trying to access server securely
 
